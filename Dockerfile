@@ -53,8 +53,7 @@ RUN python3 -m pip install \
     ipywidgets \
   && ${HOME}/.local/bin/jupyter nbextension enable --py widgetsnbextension \
   && python3 -m pip install ipykernel \
-  && python2 -m ipykernel install --user \
-  && mkdir -p /home/jupyter/.config/matplotlib
+  && python2 -m ipykernel install --user
 
 ## Install nodejs+jupyterlab and widgets ##
 ###########################################
