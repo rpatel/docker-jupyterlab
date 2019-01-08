@@ -4,7 +4,9 @@
 [![Docker Build Status](https://img.shields.io/docker/build/patelravip/jupyterlab.svg)](https://hub.docker.com/r/patelravip/jupyterlab)
 [![Docker Stars](https://img.shields.io/docker/stars/patelravip/jupyterlab.svg)](https://hub.docker.com/r/patelravip/jupyterlab)
 [![Docker Pulls](https://img.shields.io/docker/pulls/patelravip/jupyterlab.svg)](https://hub.docker.com/r/patelravip/jupyterlab)
-[![GitHub Release](https://img.shields.io/github/release/rpatel/docker-jupyterlab.svg)](https://github.com/rpatel/docker-jupyterlab)
+[![Image Layers](https://images.microbadger.com/badges/image/patelravip/jupyterlab.svg)](https://microbadger.com/images/patelravip/jupyterlab)
+[![Build from Commit](https://images.microbadger.com/badges/commit/patelravip/jupyterlab.svg)](https://microbadger.com/images/patelravip/jupyterlab)
+![Analytics](https://analytics.ravipatel.org/p?idsite=4&rec=1)
 
 Docker image for a JupyterLab instance that includes Python 2 and 3 kernels as 
 well as associated packages required for notebook widgets.
