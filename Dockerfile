@@ -31,13 +31,15 @@ RUN apt-get update \
     python-pip \
   && rm -rf /var/lib/apt/lists/*
 
-## Make runtime user ##
-#######################
+## Make runtime user and dirs ##
+################################
 ARG UID=100000
 ARG GID=100000
 RUN groupadd -g ${GID} jupyter \
   && useradd -u ${UID} -g ${GID} -m -s /bin/bash jupyter \
-  && chown -R jupyter:jupyter /home/jupyter
+  && chown -R jupyter:jupyter /home/jupyter \
+  && mkdir /home/jupyter/Notebooks \
+  && chown jupyter:jupyter /home/jupyter/Notebooks
 
 USER jupyter
 WORKDIR /home/jupyter
@@ -79,4 +81,4 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/home/jupyter/.local/bin/jupyter","lab"]
 
 EXPOSE 8888
-VOLUME [ "/home/jupyter" ]
+VOLUME [ "/home/jupyter/.jupyter", "/home/jupyter/Notebooks" ]
