@@ -68,6 +68,10 @@ RUN mkdir ${NVM_DIR} \
   && python3 -m pip install jupyterlab \
   && /home/jupyter/.local/bin/jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
+# Copy utility scripts #
+########################
+COPY ./bin /usr/local/bin
+
 # Entrypoint and command business #
 ###################################
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
