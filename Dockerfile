@@ -23,6 +23,7 @@ RUN apt-get update \
   && apt-get install -y \
     curl \
     build-essential \
+    git \
   && apt-get install -y \
     python3 \
     python2.7 \
@@ -65,7 +66,7 @@ RUN mkdir ${NVM_DIR} \
   && nvm install ${NODE_VERSION} \
   && nvm alias default ${NODE_VERSION} \
   && nvm use default \
-  && python3 -m pip install jupyterlab \
+  && python3 -m pip install git+https://github.com/jupyterlab/jupyterlab.git@master \
   && /home/jupyter/.local/bin/jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 # Copy utility scripts #
