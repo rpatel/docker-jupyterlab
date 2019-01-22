@@ -8,14 +8,13 @@ ARG VCS_REF
 ARG VCS_URL=https://github.com/rpatel/docker-jupyterlab
 LABEL maintainer="Ravi Patel <rpatel@temple.edu>" \
       org.label-schema.build-date="${BUILD_DATE}" \
-      org.label-schema.name="atheme" \
+      org.label-schema.name="jupyterlab" \
       org.label-schema.description=" \
-        Alpine based atheme image. \
+        Debian Stretch (slim) based JupyterLab image. \
         For stand-alone or compose/stack service use." \
       org.label-schema.url="${VCS_URL}" \
       org.label-schema.vcs-ref="${VCS_REF}" \
       org.label-schema.vcs-url="${VCS_URL}" \
-      org.label-schema.version="${ATHEME_TAG}" \
       org.label-schema.schema-version="1.0"
 
 ## Install requirements ##
